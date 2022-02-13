@@ -33,5 +33,27 @@ func main() {
 
 	mySlice = append(mySlice, "Vishnu") // adding an item to the existing slice
 	fmt.Println(mySlice)
+
+	var my_slice_1 = make([]int, 4, 7) // creating slice by using make() 4 -> length, 7 -> capacity
+
+	fmt.Println(my_slice_1)
+
+	my_slice_1[0] = 1
+	my_slice_1[1] = 2
+	my_slice_1[2] = 3
+	my_slice_1[3] = 4
+	//my_slice_1[4] = 5
+	fmt.Println(my_slice_1)
+
+	my_slice_1 = my_slice_1[:0]
+	fmt.Println(my_slice_1)
+	my_slice_1 = my_slice_1[:4] // extend the slice upto 4
+	// my_slice_1[5] = 6
+	// my_slice_1[6] = 7
+	my_slice_1 = my_slice_1[:7] // // extend the slice upto 7
+
+	my_slice_1 = my_slice_1[:8] // will throw error since you can only extend it  upto 7 (capacity defined while creating my_slice_1 by make)
+	fmt.Println(my_slice_1)
+
 	fmt.Println("end")
 }
