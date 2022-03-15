@@ -71,6 +71,12 @@ const (
 * Name of constants should follow the same rules as variable names, which means a valid constant name must starts with a letter or underscore, followed by any number of letters, numbers or underscores.
 * By convention, constant names are usually written in uppercase letters. This is for their easy identification and differentiation from variables in the source code.
 
+### Tips and tricks
+
+http://www.golangbootcamp.com/book/tricks_and_tips
+
+
+
 
 
 
