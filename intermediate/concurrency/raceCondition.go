@@ -4,6 +4,9 @@ Read condition occur when an variable or object is accessed (read or write) conc
 The value might be inconsistence since the while reading the value, the variable or object
 might be altered by other routine or thread.
 
+To avoid race condition we can use mutex lock to restrain the object or variable from
+accessing by other go routine till it is unlocked.  It has been discussed in mutex.go file.
+
 */
 
 package main
