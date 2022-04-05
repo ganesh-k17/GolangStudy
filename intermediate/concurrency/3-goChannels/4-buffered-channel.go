@@ -39,3 +39,38 @@ func main() {
 	fmt.Println(<-ch)
 	fmt.Println("done")
 }
+
+/*
+
+If we try to send another text to the channel then it will create deadlock as below.
+But here we have to receive a value before sending another data to the channel to avoid deadlock
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	// create a buffered channel
+	// with a capacity of 2.
+	ch := make(chan string, 2)
+	ch <- "geeksforgeeks"
+	ch <- "geeksforgeeks world"
+	ch <- "hello"
+	fmt.Println(<-ch)
+	fmt.Println(<-ch)
+	fmt.Println(<-ch)
+	fmt.Println("done")
+}
+
+Output
+
+fatal error: all goroutines are asleep - deadlock!
+
+goroutine 1 [chan send]:
+main.main()
+        E:/Golang/GolangStudy/intermediate/concurrency/3-goChannels/4-buffered-channel.go:38 +0xa5
+exit status 2
+*/
