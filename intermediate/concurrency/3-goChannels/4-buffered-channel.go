@@ -22,3 +22,20 @@ Here , capacity in the above syntax should be greater than 0 for a channel to ha
 The capacity for an unbuffered channel is 0 by default and hence it omit the capacity parameter.
 
 */
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+
+	// create a buffered channel
+	// with a capacity of 2.
+	ch := make(chan string, 2)
+	ch <- "geeksforgeeks"
+	ch <- "geeksforgeeks world"
+	fmt.Println(<-ch)
+	fmt.Println(<-ch)
+	fmt.Println("done")
+}
