@@ -2,6 +2,17 @@
 
 This repo will have a collection of Golang concepts
 
+## Go Build and Run
+
+```go
+go build hello.go
+go run hello.go
+```
+
+Use go run when we want to treat a Go program like a script and run the source code immediately.
+
+Most of the time we want to build a binary for later use. That’s where we use the go build command.
+
 ## Basics:
 
 ### Variable:
