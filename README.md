@@ -31,12 +31,12 @@ Most of the time we want to build a binary for later use. That’s where we use 
 
 ### Scope of Variables:
 
-* Scope of Golang Variables Defined by Brace Brackets.
-* Goland uses lexical scoping based on code blocks to determine the scope of variables.
-* Inner block can access its outer block defined variables.
-* But outer block cannot access inner block defined variables.
+- Scope of Golang Variables Defined by Brace Brackets.
+- Goland uses lexical scoping based on code blocks to determine the scope of variables.
+- Inner block can access its outer block defined variables.
+- But outer block cannot access inner block defined variables.
 
-``` 
+```
 package main
 
 import (
@@ -58,7 +58,7 @@ func main() {
 		}
 	}
 	fmt.Println(x)
-} 
+}
 ```
 
 ### Constants
@@ -79,17 +79,17 @@ const (
 )
 ```
 
-* Name of constants should follow the same rules as variable names, which means a valid constant name must starts with a letter or underscore, followed by any number of letters, numbers or underscores.
-* By convention, constant names are usually written in uppercase letters. This is for their easy identification and differentiation from variables in the source code.
+- Name of constants should follow the same rules as variable names, which means a valid constant name must starts with a letter or underscore, followed by any number of letters, numbers or underscores.
+- By convention, constant names are usually written in uppercase letters. This is for their easy identification and differentiation from variables in the source code.
 
 ### Tips and tricks
 
 http://www.golangbootcamp.com/book/tricks_and_tips
 
+### Array and Slice difference:
 
-
-
-
-
-
-
+| Array                     | Slice                         |
+| ------------------------- | ----------------------------- |
+| Arrays have fixed length  | Slice don't have fixed length |
+| myArray := [3]int{1,2,3}; | mySlice := []int{1,2,3}       |
+|                           |                               |

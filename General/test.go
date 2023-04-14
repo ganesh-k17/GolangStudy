@@ -1,10 +1,9 @@
 package main
 import "fmt"
 
-func main() {
-	
-const name
-fmt.Printf("%v: %T \n", name, name)
+func main() {	
+	const name
+	fmt.Printf("%v: %T \n", name, name)
 }
 
 
