@@ -55,5 +55,31 @@ func main() {
 	my_slice_1 = my_slice_1[:8] // will throw error since you can only extend it  upto 7 (capacity defined while creating my_slice_1 by make)
 	fmt.Println(my_slice_1)
 
+	/*Creating a slice with no items and add items to the slice */
+
+	mySlice_2 := make([]int, 0)
+	mySlice_2 = append(mySlice_2, 1)
+	mySlice_2 = append(mySlice_2, 2)
+	mySlice_2 = append(mySlice_2, 3)
+
+	fmt.Println(mySlice_2)
+
+	/* Slice delete */
+
+	testSlice := []int{10, 20, 30, 40, 50}
+	indexToDelete := 2                                                               // I want to delete 2nd index
+	resultSlick := append(testSlice[:indexToDelete], testSlice[indexToDelete+1:]...) // S0 30 will get delete which is in 2nd Index.
+	fmt.Println(resultSlick)
+
 	fmt.Println("end")
 }
+
+/* Array and Slice differences
+
+| Array                     | Slice                         |
+|---------------------------|-------------------------------|
+| Arrays have fixed length  | Slice don't have fixed length |
+| myArray := [3]int{1,2,3}; | mySlice := []int{1,2,3}       |
+|                           |                               |
+
+*/

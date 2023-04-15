@@ -88,8 +88,16 @@ http://www.golangbootcamp.com/book/tricks_and_tips
 
 ### Array and Slice difference:
 
-| Array                     | Slice                         |
-| ------------------------- | ----------------------------- |
-| Arrays have fixed length  | Slice don't have fixed length |
-| myArray := [3]int{1,2,3}; | mySlice := []int{1,2,3}       |
-|                           |                               |
+| Array                    | Slice                         |
+| ------------------------ | ----------------------------- |
+| Arrays have fixed length | Slice don't have fixed length |
+| myArray := [3]int{1,2,3} | mySlice := []int{1,2,3}       |
+|                          |                               |
+
+### Creating slice by make
+
+```go
+mySlice := make([]<datatype>, length, capacity)
+
+mySlice := make([]int, 3, 4)
+```
