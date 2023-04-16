@@ -71,6 +71,27 @@ func main() {
 	resultSlick := append(testSlice[:indexToDelete], testSlice[indexToDelete+1:]...) // S0 30 will get delete which is in 2nd Index.
 	fmt.Println(resultSlick)
 
+	/* copy Slice */
+
+	srcSlice := []int{10, 20, 30, 40, 50}
+	destSlice := make([]int, len(srcSlice))
+	num := copy(destSlice, srcSlice) // It will copy all the elements to destSlice
+	fmt.Println(num)
+	fmt.Println(destSlice)
+
+	srcSlice = []int{10, 20, 30, 40, 50}
+	destSlice = make([]int, 3)
+	num = copy(destSlice, srcSlice) // It will copy only the first 3 elements as the destSlice capacity is 3.
+	fmt.Println(num)
+	fmt.Println(destSlice)
+
+	/* Looping through Slices */
+
+	srcSlice = []int{10, 20, 30, 40, 50}
+	for index, item := range srcSlice {
+		fmt.Println(index, "=>", item)
+	}
+
 	fmt.Println("end")
 }
 
