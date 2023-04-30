@@ -108,6 +108,14 @@ The capacity for an unbuffered channel is 0 by default and hence it omit the cap
   - switch - Deterministic and will run in sequence to select the matching case.
   - select - Non deterministic as select will chose the case randomly in non deterministic manner.
 
+## Buffered vs Unbuffered channels
+
+- Proper use of buffered channel means that you must handle the case where
+  the channel is blocking, which might happen due to waiting on sender/receiver.
+- Buffered channels are useful when you know how many go-routines you
+  have launched, want to limit the number of go-routines you will launch, or
+  want to limit the amount of work that is queued up.
+
 ## Reference
 
 - [Geeks for geeks](https://www.geeksforgeeks.org/channel-in-golang/?ref=lbp)
