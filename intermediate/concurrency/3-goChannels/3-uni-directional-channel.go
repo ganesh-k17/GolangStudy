@@ -8,7 +8,7 @@ As we know that a channel is a medium of communication between concurrently runn
 c1:= make(<- chan bool)
 
 // Only to send data
-c2:= make(chan<-bool
+c2:= make(chan<- bool)
 
 */
 
