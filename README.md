@@ -4,14 +4,19 @@ This repo will have a collection of Golang concepts
 
 ## Must learn
 
-* Goroutine, GoChannels
-* Other tools
+- Goroutine, GoChannels
+- Other tools
   - Godep, Sltr (Dependency Management tool)
   - Go templating
   - Stringer (Go's code generating tool)
   - Revel (Go's web framework)
   - Gorilla Mux, GoGin (Router package)
   - Godoc (Create documentation from go code)
+  - Logrus, glog (logging frameworks)
+
+## Setting up workspaces
+
+[Setting up workspace](https://github.com/golang/tools/blob/master/gopls/doc/workspace.md)
 
 ## Go Build and Run
 
