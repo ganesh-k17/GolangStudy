@@ -9,7 +9,7 @@
 - create a folder name .gitub in root folder
 - create file ci.yaml
 
-sample ci.yaml file:
+sample ci.yaml file for .net:
 
 ```yaml
 name: Continuous Integration
