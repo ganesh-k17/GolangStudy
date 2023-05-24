@@ -1,4 +1,5 @@
 $ go doc sort
+
 package sort // import "sort"
 func IntsAreSorted(x []int) bool
 func IsSorted(data Interface) bool
